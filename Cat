@@ -1,0 +1,69 @@
+package com.gmail.tsa;
+
+public class Cat {
+	private String breed;
+	private double weight;
+	private String gender;
+	private String temper; 
+	
+	public Cat(String breed, double weight, String gender, String temper) {
+		super();
+		this.breed = breed;
+		this.weight = weight;
+		this.gender = gender;
+		this.temper = temper;
+	}
+
+	public Cat() {
+		super();
+	}
+
+
+	public String getBreed() {
+		return breed;
+	}
+
+	public void setBreed(String breed) {
+		this.breed = breed;
+	}
+
+	public double getWeight() {
+		return weight;
+	}
+
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getTemper() {
+		return temper;
+	}
+
+	public void setTemper(String temper) {
+		this.temper = temper;
+	}
+	
+	public void voice(){
+		System.out.println("MEOW-MEOW!!!"); }
+
+	Cat ChangeGender(Cat a, String newgender){
+		a.gender = newgender;
+		return a;}
+	
+	public void FeedTheCat (double Eat) {
+		weight=weight+Eat;
+	}
+	
+	@Override
+	public String toString() {
+		return "Cat [breed=" + breed + ", weight=" + weight + ", gender=" + gender + ", temper=" + temper + "]";
+	}
+}
