@@ -1,0 +1,49 @@
+package com.gmail.tsa;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+// Cat
+Cat CatOne=new Cat ("Meine Coon",17.5,"Male","Wild");		
+Cat CatTwo=new Cat ("Persian",12.0,"Female","Lazy");	
+Cat CatThree=new Cat ("Sphinx",7.3,"Male","Sly");	
+
+CatOne.FeedTheCat(1);
+CatThree.FeedTheCat(2);
+
+if (CatTwo.getGender() == "Female")
+CatTwo = CatTwo.ChangeGender(CatTwo, "Male");
+else CatTwo = CatTwo.ChangeGender(CatTwo, "Female");
+
+System.out.println (CatOne);
+System.out.println (CatTwo);
+System.out.println (CatThree);
+
+
+//Triangle
+Triangle TriangleA=new Triangle (20,20,10);
+Triangle TriangleB=new Triangle (100,400,400);
+Triangle TriangleC=new Triangle (5,5,5);
+
+double max;
+if (TriangleA.CountSquare()>TriangleB.CountSquare()) 
+	max=TriangleA.CountSquare();
+	else 
+		max=TriangleB.CountSquare();
+
+if (TriangleC.CountSquare()>max) 
+	max=TriangleC.CountSquare();
+
+System.out.println (TriangleA);
+System.out.println (TriangleB);
+System.out.println (TriangleC);
+System.out.println ("Площадь треугольника А " + TriangleA.CountSquare());
+System.out.println ("Площадь треугольника B " + TriangleB.CountSquare());
+System.out.println ("Площадь треугольника C " + TriangleC.CountSquare());
+System.out.println ("Наибольшая площадь треугольника " + max);
+
+	}
+}
